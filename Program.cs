@@ -1,7 +1,18 @@
 using Microsoft.EntityFrameworkCore;
-using Restaurante_Karol.Models;
+using RestauranteKarol.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:4200"
+                                ).AllowAnyHeader()
+                                                  .AllowAnyMethod();
+        });
+});
 
 // Add services to the container.
 
@@ -9,7 +20,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<RESTAURANTE_KAROLContext>(options => options.UseSqlServer("Server=CARLOS\\SQLEXPRESS;Database=RESTAURANTE_KAROL;Trusted_Connection=True;MultipleActiveResultSets=true"));
+builder.Services.AddDbContext<ProyectoRestKarolContext>(options => options.UseSqlServer("Server=DAVID\\SQLEXPRESS;Database=ProyectoRestKarol;Trusted_Connection=True;MultipleActiveResultSets=true"));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -20,6 +31,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors();
 
 app.UseAuthorization();
 

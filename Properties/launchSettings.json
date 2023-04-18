@@ -4,17 +4,17 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:58748",
-      "sslPort": 44375
+      "applicationUrl": "http://localhost:12602",
+      "sslPort": 44305
     }
   },
   "profiles": {
-    "Restaurante_Karol": {
+    "RestauranteKarol": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:7257;http://localhost:5037",
+      "applicationUrl": "https://localhost:7008;http://localhost:5229",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

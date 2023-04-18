@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Restaurante_Karol.Models
+namespace RestauranteKarol.Models
 {
     public partial class Platillo
     {
         public Platillo()
         {
-            InventarioPlatillos = new HashSet<InventarioPlatillo>();
-            PlatilloXfacturas = new HashSet<PlatilloXfactura>();
+           
         }
 
         public int IdPlatillo { get; set; }
@@ -16,7 +15,5 @@ namespace Restaurante_Karol.Models
         public string TipoPlatillo { get; set; } = null!;
         public string DescripPlat { get; set; } = null!;
 
-        public virtual ICollection<InventarioPlatillo> InventarioPlatillos { get; set; }
-        public virtual ICollection<PlatilloXfactura> PlatilloXfacturas { get; set; }
     }
 }

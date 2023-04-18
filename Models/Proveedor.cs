@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Restaurante_Karol.Models
+namespace RestauranteKarol.Models
 {
     public partial class Proveedor
     {
         public Proveedor()
         {
-            Compras = new HashSet<Compra>();
-            Egresos = new HashSet<Egreso>();
+          
         }
 
         public int IdProveedor { get; set; }
@@ -17,10 +16,6 @@ namespace Restaurante_Karol.Models
         public string CorreoProveedor { get; set; } = null!;
         public string TelProveedor { get; set; } = null!;
         public string DirProveedor { get; set; } = null!;
-        public int IdProducto { get; set; }
-
-        public virtual Producto IdProductoNavigation { get; set; } = null!;
-        public virtual ICollection<Compra> Compras { get; set; }
-        public virtual ICollection<Egreso> Egresos { get; set; }
+        public int IdProducto { get; set; }   
     }
 }

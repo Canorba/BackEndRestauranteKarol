@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Restaurante_Karol.Models
+namespace RestauranteKarol.Models
 {
     public partial class Usuario
     {
