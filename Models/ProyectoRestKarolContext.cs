@@ -54,8 +54,6 @@ namespace RestauranteKarol.Models
                     .HasColumnType("date")
                     .HasColumnName("Fecha_Despacho");
 
-                entity.Property(e => e.IdProveedor).HasColumnName("idProveedor");
-
                 entity.Property(e => e.TipoCompra)
                     .HasMaxLength(45)
                     .IsUnicode(false)
@@ -77,8 +75,6 @@ namespace RestauranteKarol.Models
                 entity.Property(e => e.FechaPago)
                     .HasColumnType("date")
                     .HasColumnName("Fecha_Pago");
-
-                entity.Property(e => e.IdProveedor).HasColumnName("idProveedor");
 
                 entity.Property(e => e.TipoEgreso)
                     .HasMaxLength(45)
@@ -109,14 +105,6 @@ namespace RestauranteKarol.Models
                     .HasMaxLength(45)
                     .IsUnicode(false)
                     .HasColumnName("Forma_Pago");
-
-                entity.Property(e => e.IdPedido).HasColumnName("idPedido");
-
-                entity.HasOne(d => d.IdPedidoNavigation)
-                    .WithMany(p => p.Facturas)
-                    .HasForeignKey(d => d.IdPedido)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Factura__idPedid__6C190EBB");
             });
 
             modelBuilder.Entity<Inventario>(entity =>
@@ -130,8 +118,6 @@ namespace RestauranteKarol.Models
                 entity.Property(e => e.FechaIngreso)
                     .HasColumnType("date")
                     .HasColumnName("Fecha_Ingreso");
-
-                entity.Property(e => e.IdProducto).HasColumnName("idProducto");
 
             });
 
@@ -251,12 +237,6 @@ namespace RestauranteKarol.Models
                 entity.Property(e => e.IdFactura).HasColumnName("idFactura");
 
                 entity.Property(e => e.IdPlatillo).HasColumnName("idPlatillo");
-
-                entity.HasOne(d => d.IdFacturaNavigation)
-                    .WithMany(p => p.PlatilloXfacturas)
-                    .HasForeignKey(d => d.IdFactura)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__PlatilloX__idFac__6B24EA82");
 
             });
 

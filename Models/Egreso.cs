@@ -9,8 +9,5 @@ namespace RestauranteKarol.Models
         public string TipoEgreso { get; set; } = null!;
         public string DescripEgreso { get; set; } = null!;
         public DateTime FechaPago { get; set; }
-        public int IdProveedor { get; set; }
-
-        public virtual Proveedor IdProveedorNavigation { get; set; } = null!;
     }
 }

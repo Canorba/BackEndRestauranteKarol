@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using RestauranteKarol.Models;
 
 namespace Restaurante_Karol.Models
 {
@@ -54,18 +55,11 @@ namespace Restaurante_Karol.Models
                     .HasColumnType("date")
                     .HasColumnName("Fecha_Despacho");
 
-                entity.Property(e => e.IdProveedor).HasColumnName("idProveedor");
-
                 entity.Property(e => e.TipoCompra)
                     .HasMaxLength(10)
                     .HasColumnName("Tipo_Compra")
                     .IsFixedLength();
 
-                entity.HasOne(d => d.IdProveedorNavigation)
-                    .WithMany(p => p.Compras)
-                    .HasForeignKey(d => d.IdProveedor)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Compras__idProve__4222D4EF");
             });
 
             modelBuilder.Entity<Egreso>(entity =>
@@ -83,18 +77,11 @@ namespace Restaurante_Karol.Models
                     .HasColumnType("date")
                     .HasColumnName("Fecha_Pago");
 
-                entity.Property(e => e.IdProveedor).HasColumnName("idProveedor");
-
                 entity.Property(e => e.TipoEgreso)
                     .HasMaxLength(10)
                     .HasColumnName("Tipo_Egreso")
                     .IsFixedLength();
-
-                entity.HasOne(d => d.IdProveedorNavigation)
-                    .WithMany(p => p.Egresos)
-                    .HasForeignKey(d => d.IdProveedor)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Egresos__idProve__4316F928");
+            
             });
 
             modelBuilder.Entity<Factura>(entity =>
@@ -118,14 +105,6 @@ namespace Restaurante_Karol.Models
                     .HasMaxLength(10)
                     .HasColumnName("Forma_Pago")
                     .IsFixedLength();
-
-                entity.Property(e => e.IdPedido).HasColumnName("idPedido");
-
-                entity.HasOne(d => d.IdPedidoNavigation)
-                    .WithMany(p => p.Facturas)
-                    .HasForeignKey(d => d.IdPedido)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Factura__idPedid__3C69FB99");
             });
 
             modelBuilder.Entity<Inventario>(entity =>
@@ -139,14 +118,6 @@ namespace Restaurante_Karol.Models
                 entity.Property(e => e.FechaIngreso)
                     .HasColumnType("date")
                     .HasColumnName("Fecha_Ingreso");
-
-                entity.Property(e => e.IdProducto).HasColumnName("idProducto");
-
-                entity.HasOne(d => d.IdProductoNavigation)
-                    .WithMany(p => p.Inventarios)
-                    .HasForeignKey(d => d.IdProducto)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Inventari__idPro__3E52440B");
             });
 
             modelBuilder.Entity<InventarioPlatillo>(entity =>
@@ -160,18 +131,6 @@ namespace Restaurante_Karol.Models
                 entity.Property(e => e.IdPlatillo).HasColumnName("idPlatillo");
 
                 entity.Property(e => e.IdProducto).HasColumnName("idProducto");
-
-                entity.HasOne(d => d.IdPlatilloNavigation)
-                    .WithMany(p => p.InventarioPlatillos)
-                    .HasForeignKey(d => d.IdPlatillo)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Inventari__idPla__412EB0B6");
-
-                entity.HasOne(d => d.IdProductoNavigation)
-                    .WithMany(p => p.InventarioPlatillos)
-                    .HasForeignKey(d => d.IdProducto)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Inventari__idPro__403A8C7D");
             });
 
             modelBuilder.Entity<Pedido>(entity =>
@@ -204,12 +163,6 @@ namespace Restaurante_Karol.Models
                     .IsFixedLength();
 
                 entity.Property(e => e.ValorEntrega).HasColumnName("Valor_Entrega");
-
-                entity.HasOne(d => d.IdPersonaNavigation)
-                    .WithMany(p => p.Pedidos)
-                    .HasForeignKey(d => d.IdPersona)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Pedido__idPerson__398D8EEE");
             });
 
             modelBuilder.Entity<Persona>(entity =>
@@ -279,18 +232,6 @@ namespace Restaurante_Karol.Models
                 entity.Property(e => e.IdFactura).HasColumnName("idFactura");
 
                 entity.Property(e => e.IdPlatillo).HasColumnName("idPlatillo");
-
-                entity.HasOne(d => d.IdFacturaNavigation)
-                    .WithMany(p => p.PlatilloXfacturas)
-                    .HasForeignKey(d => d.IdFactura)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__PlatilloX__idFac__3B75D760");
-
-                entity.HasOne(d => d.IdPlatilloNavigation)
-                    .WithMany(p => p.PlatilloXfacturas)
-                    .HasForeignKey(d => d.IdPlatillo)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__PlatilloX__idPla__3A81B327");
             });
 
             modelBuilder.Entity<Producto>(entity =>
@@ -353,12 +294,6 @@ namespace Restaurante_Karol.Models
                     .HasMaxLength(10)
                     .HasColumnName("Tel_Proveedor")
                     .IsFixedLength();
-
-                entity.HasOne(d => d.IdProductoNavigation)
-                    .WithMany(p => p.Proveedors)
-                    .HasForeignKey(d => d.IdProducto)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Proveedor__idPro__3F466844");
             });
 
             modelBuilder.Entity<Usuario>(entity =>
@@ -389,12 +324,6 @@ namespace Restaurante_Karol.Models
                     .HasMaxLength(10)
                     .HasColumnName("Rol_Usu")
                     .IsFixedLength();
-
-                entity.HasOne(d => d.IdPersonaNavigation)
-                    .WithMany(p => p.Usuarios)
-                    .HasForeignKey(d => d.IdPersona)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Usuario__idPerso__3D5E1FD2");
             });
 
             OnModelCreatingPartial(modelBuilder);

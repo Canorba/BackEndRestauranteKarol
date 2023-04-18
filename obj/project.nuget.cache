@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mc0AlebvXwtr8IrO7T2WBuzjD8CWwI3PoOVIKBh/PomYC1fBhBghyomDauj+0w2L7LSIVG4bL3H0lUsDnX82Jw==",
+  "dgSpecHash": "4HFyC8J9nNzhaDuz0OlMI3AljTEZprLs1JzKwVM2tmf1ZhLRE9M/IQqDJBLDnDk+o2rND9/BIaiLg5Fl4Hc1ug==",
   "success": true,
-  "projectFilePath": "C:\\Users\\canor\\Documents\\Sistemas\\Programacion IV\\Proyecto\\BackEnd\\BackRestKarol\\RestauranteKarol.csproj",
+  "projectFilePath": "C:\\Users\\canor\\Documents\\Sistemas\\Programacion IV\\Proyecto\\BackEnd\\BackEndRestauranteKarol\\Restaurante_Karol.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\canor\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\canor\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

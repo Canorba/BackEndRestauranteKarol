@@ -9,8 +9,5 @@ namespace RestauranteKarol.Models
         public DateTime FechaCompra { get; set; }
         public DateTime FechaDespacho { get; set; }
         public string TipoCompra { get; set; } = null!;
-        public int IdProveedor { get; set; }
-
-        public virtual Proveedor IdProveedorNavigation { get; set; } = null!;
     }
 }

@@ -8,8 +8,5 @@ namespace RestauranteKarol.Models
         public int IdInventario { get; set; }
         public DateTime FechaIngreso { get; set; }
         public int Existencias { get; set; }
-        public int IdProducto { get; set; }
-
-        public virtual Producto IdProductoNavigation { get; set; } = null!;
     }
 }
