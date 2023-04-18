@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Restaurante_Karol.Models
+namespace RestauranteKarol.Models
 {
     public partial class Persona
     {
         public Persona()
         {
-            Pedidos = new HashSet<Pedido>();
-            Usuarios = new HashSet<Usuario>();
+       
         }
 
         public int IdPersona { get; set; }
@@ -19,7 +18,6 @@ namespace Restaurante_Karol.Models
         public string CorreoPersona { get; set; } = null!;
         public string Direccion { get; set; } = null!;
 
-        public virtual ICollection<Pedido> Pedidos { get; set; }
-        public virtual ICollection<Usuario> Usuarios { get; set; }
+  
     }
 }

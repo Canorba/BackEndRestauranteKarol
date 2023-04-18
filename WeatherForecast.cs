@@ -1,4 +1,4 @@
-namespace Restaurante_Karol
+namespace RestauranteKarol
 {
     public class WeatherForecast
     {

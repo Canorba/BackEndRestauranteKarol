@@ -5,17 +5,17 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Restaurante_Karol.Models;
+using RestauranteKarol.Models;
 
-namespace Restaurante_Karol.Controllers
+namespace RestauranteKarol.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class UsuariosController : ControllerBase
     {
-        private readonly RESTAURANTE_KAROLContext _context;
+        private readonly ProyectoRestKarolContext _context;
 
-        public UsuariosController(RESTAURANTE_KAROLContext context)
+        public UsuariosController(ProyectoRestKarolContext context)
         {
             _context = context;
         }
