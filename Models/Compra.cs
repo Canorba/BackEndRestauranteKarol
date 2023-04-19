@@ -10,4 +10,6 @@ namespace RestauranteKarol.Models
         public DateTime FechaDespacho { get; set; }
         public string TipoCompra { get; set; } = null!;
     }
+
+    System.out.println();
 }
