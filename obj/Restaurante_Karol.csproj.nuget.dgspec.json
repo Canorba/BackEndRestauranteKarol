@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\canor\\Documents\\Sistemas\\Programacion IV\\Proyecto\\BackEnd\\BackEndRestauranteKarol\\Restaurante_Karol.csproj": {}
+    "D:\\Proyecto\\BackRest\\BackEndRestauranteKarol\\Restaurante_Karol.csproj": {}
   },
   "projects": {
-    "C:\\Users\\canor\\Documents\\Sistemas\\Programacion IV\\Proyecto\\BackEnd\\BackEndRestauranteKarol\\Restaurante_Karol.csproj": {
+    "D:\\Proyecto\\BackRest\\BackEndRestauranteKarol\\Restaurante_Karol.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\canor\\Documents\\Sistemas\\Programacion IV\\Proyecto\\BackEnd\\BackEndRestauranteKarol\\Restaurante_Karol.csproj",
+        "projectUniqueName": "D:\\Proyecto\\BackRest\\BackEndRestauranteKarol\\Restaurante_Karol.csproj",
         "projectName": "Restaurante_Karol",
-        "projectPath": "C:\\Users\\canor\\Documents\\Sistemas\\Programacion IV\\Proyecto\\BackEnd\\BackEndRestauranteKarol\\Restaurante_Karol.csproj",
-        "packagesPath": "C:\\Users\\canor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\canor\\Documents\\Sistemas\\Programacion IV\\Proyecto\\BackEnd\\BackEndRestauranteKarol\\obj\\",
+        "projectPath": "D:\\Proyecto\\BackRest\\BackEndRestauranteKarol\\Restaurante_Karol.csproj",
+        "packagesPath": "C:\\Users\\deivi\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyecto\\BackRest\\BackEndRestauranteKarol\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\canor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\deivi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
