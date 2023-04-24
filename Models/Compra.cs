@@ -9,7 +9,5 @@ namespace RestauranteKarol.Models
         public DateTime FechaCompra { get; set; }
         public DateTime FechaDespacho { get; set; }
         public string TipoCompra { get; set; } = null!;
-
-        // Pruebas de git
     }
 }
